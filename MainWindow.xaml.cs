@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MuOnline_Launcher_WPF.Mirrors;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,9 @@ namespace MuOnline_Launcher_WPF
 
         private void Button_Settings(object sender, RoutedEventArgs e)
         {
-
+            Settings settings = new Settings();
+            settings.Owner = this;
+            settings.Show();
         }
     }
 }
