@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MuOnline_Launcher_WPF"
         mc:Ignorable="d"
-        Title="Laucher" Height="600" Width="800" WindowStartupLocation="CenterScreen" Cursor="Arrow"  Visibility="Visible" WindowStyle="None" AllowsTransparency="True">
+        Title="Laucher" Height="600" Width="800" WindowStartupLocation="CenterScreen" Cursor="Arrow"  Visibility="Visible" WindowStyle="None" AllowsTransparency="True" MouseMove="Windows_MouseMove">
+    
     <Window.Background>
         <ImageBrush ImageSource="images/launcher_background.png" />
     </Window.Background>
@@ -22,7 +23,7 @@
             </StackPanel>
         </Button>
 
-        <Button Width="54" Height="49" Margin="704,506,42,44" Background="Transparent" BorderBrush="Beige">
+        <Button Width="54" Height="49" Margin="704,506,42,44" Background="Transparent" BorderBrush="Beige" Click="Button_Settings">
             <StackPanel>
                 <Image Source="images/options.png" Stretch="fill"/>
             </StackPanel>

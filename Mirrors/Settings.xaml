@@ -5,32 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MuOnline_Launcher_WPF.Mirrors"
         mc:Ignorable="d"
-        Title="Settings" Height="330" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="200"/>
-        </Grid.ColumnDefinitions>
+        Title="Settings" Height="501" Width="300" WindowStartupLocation="CenterOwner" Visibility="Visible" AllowsTransparency="True" WindowStyle="None" MouseMove="Window_MouseMove" SizeToContent="WidthAndHeight">
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="230"/>
-            <RowDefinition Height="70"/>
-        </Grid.RowDefinitions>
-        <StackPanel Grid.Column="0" Grid.Row="0">
-            <TextBox Text="Sound / Music" TextAlignment="Center"></TextBox>
-           
-        </StackPanel>
-
-        <StackPanel Grid.Column="1" Grid.Row="0">
-            <TextBox Text="Resolution" TextAlignment="Center"></TextBox>
-        </StackPanel>
-
-        <StackPanel Grid.Column="2" Grid.Row="0">
-            <TextBox Text="Language" TextDecorations="{x:Null}" TextAlignment="Center"/>
-        </StackPanel>
-
-        <Button Content="Save" Grid.Column="1" Grid.Row="1"/>
-
+    <Window.Background>
+        <ImageBrush ImageSource="menu.png"/>
+    </Window.Background>
+    <Grid Cursor="Arrow">
+        <Button Background="Transparent" BorderBrush="Beige" Click="Button_Exit" Width="25" Height="25" Margin="252,64,23,412">
+            <StackPanel>
+                <Image Source="close.png" RenderTransformOrigin="1.269,1.562" Width="21" Height="21" Cursor="Arrow" AutomationProperties.Name="ButtonExit" Stretch="UniformToFill" />
+            </StackPanel>
+        </Button>
     </Grid>
 </Window>

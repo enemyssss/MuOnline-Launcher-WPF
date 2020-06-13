@@ -30,5 +30,20 @@ namespace MuOnline_Launcher_WPF
         {
             Application.Current.Shutdown();
         }
+
+        private void Button_Settings(object sender, RoutedEventArgs e)
+        {
+            Settings settings = new Settings();
+            this.Visibility = Visibility.Visible;
+            settings.Show();
+        }
+
+        private void Windows_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
+        }
     }
 }

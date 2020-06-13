@@ -117,5 +117,14 @@
   <ItemGroup>
     <Resource Include="Images\options.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Mirrors\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Mirrors\close.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
