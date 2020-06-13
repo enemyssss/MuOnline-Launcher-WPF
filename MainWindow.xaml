@@ -5,37 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MuOnline_Launcher_WPF"
         mc:Ignorable="d"
-        Title="Laucher" Height="600" Width="800" WindowStartupLocation="CenterScreen" Cursor="Arrow" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="350"></RowDefinition>
-            <RowDefinition Height="80"></RowDefinition>
-            <RowDefinition Height="130"></RowDefinition>
-        </Grid.RowDefinitions>
+        Title="Laucher" Height="600" Width="800" WindowStartupLocation="CenterScreen" Cursor="Arrow"  Visibility="Visible" WindowStyle="None" AllowsTransparency="True">
+    <Window.Background>
+        <ImageBrush ImageSource="images/launcher_background.png" />
+    </Window.Background>
+    <Grid Margin="7,-2,-7,2">
+        <Button Margin="748,166,27,408" Background="Transparent" BorderBrush="Beige" Click="Button_Exit" Width="25" Height="25">
+            <StackPanel>
+                <Image Source="images/close.png" RenderTransformOrigin="1.269,1.562" Width="21" Height="21" Cursor="Arrow" Stretch="Fill" AutomationProperties.Name="ButtonExit" />
+            </StackPanel>
+        </Button>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="28.5"></ColumnDefinition>
-            <ColumnDefinition Width="350.5"/>
-            <ColumnDefinition Width="63"/>
-            <ColumnDefinition Width="350"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+        <Button Width="160" Height="49" Margin="526,506,114,44" Background="Transparent" BorderBrush="Beige">
+            <StackPanel>
+                <Image Source="images/play.png" RenderTransformOrigin="1.269,1.562"  Cursor="Arrow"  Stretch="Fill"/>
+            </StackPanel>
+        </Button>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
-
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="3">
-
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="4">
-
-        </StackPanel>
-
-        <DockPanel Grid.Row="2" Grid.ColumnSpan="4">
-            <Button Content="PLAY" DockPanel.Dock="Left"></Button>
-            <Button Content="CLOSE" DockPanel.Dock="Right" Click="Button_Close"></Button>
-            <Button Content="SETTINGS" Click="Button_Settings" ></Button>
-        </DockPanel>
+        <Button Width="54" Height="49" Margin="704,506,42,44" Background="Transparent" BorderBrush="Beige">
+            <StackPanel>
+                <Image Source="images/options.png" Stretch="fill"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Window>

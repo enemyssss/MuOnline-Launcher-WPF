@@ -4,21 +4,6 @@
              xmlns:local="clr-namespace:MuOnline_Launcher_WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="StackPanel">
-            <Setter Property="Background" Value="DarkGray"></Setter>
-            <Setter Property="Margin" Value="11"></Setter>
-        </Style>
 
-        <Style TargetType="DockPanel">
-            <Setter Property="Background" Value="DarkGray"></Setter>
-            <Setter Property="Margin" Value="11"></Setter>
-        </Style>
-
-        <Style TargetType="Button">
-            <Setter Property="Background" Value="AliceBlue"></Setter>
-            <Setter Property="FontSize" Value="20"></Setter>
-            <Setter Property="Width" Value="100"></Setter>
-            <Setter Property="Margin" Value="10"></Setter>
-        </Style>
     </Application.Resources>
 </Application>

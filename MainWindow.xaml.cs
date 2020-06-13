@@ -26,16 +26,9 @@ namespace MuOnline_Launcher_WPF
             InitializeComponent();
         }
 
-        private void Button_Close(object sender, RoutedEventArgs e)
+        private void Button_Exit(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }
-
-        private void Button_Settings(object sender, RoutedEventArgs e)
-        {
-            Settings settings = new Settings();
-            settings.Owner = this;
-            settings.Show();
         }
     }
 }

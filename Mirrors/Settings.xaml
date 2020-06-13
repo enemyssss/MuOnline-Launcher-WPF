@@ -18,16 +18,16 @@
             <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="0" Grid.Row="0">
-            <TextBox Text="Sound / Music"></TextBox>
+            <TextBox Text="Sound / Music" TextAlignment="Center"></TextBox>
            
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="0">
-            <TextBox Text="Resolution"></TextBox>
+            <TextBox Text="Resolution" TextAlignment="Center"></TextBox>
         </StackPanel>
 
         <StackPanel Grid.Column="2" Grid.Row="0">
-            <TextBox Text="Language"></TextBox>
+            <TextBox Text="Language" TextDecorations="{x:Null}" TextAlignment="Center"/>
         </StackPanel>
 
         <Button Content="Save" Grid.Column="1" Grid.Row="1"/>

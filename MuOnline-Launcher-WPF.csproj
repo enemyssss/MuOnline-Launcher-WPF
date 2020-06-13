@@ -102,10 +102,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="97dcc5d5843a0302ae5c838843e07097.jpg" />
+    <Folder Include="Resolutions\" />
+    <Folder Include="UserControls\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UserControls\" />
+    <Resource Include="Images\launcher_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\options.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
