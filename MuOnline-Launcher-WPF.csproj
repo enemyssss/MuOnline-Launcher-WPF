@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\ChangeResolution.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -121,10 +122,10 @@
     <Resource Include="Images\menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Mirrors\menu.png" />
+    <Resource Include="Images\button_close.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Mirrors\close.png" />
+    <Resource Include="Images\icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

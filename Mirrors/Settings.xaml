@@ -5,16 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MuOnline_Launcher_WPF.Mirrors"
         mc:Ignorable="d"
-        Title="Settings" Height="501" Width="300" WindowStartupLocation="CenterOwner" Visibility="Visible" AllowsTransparency="True" WindowStyle="None" MouseMove="Window_MouseMove" SizeToContent="WidthAndHeight">
-
+        Title="Settings" Height="501" Width="300" WindowStartupLocation="CenterOwner" Visibility="Visible" AllowsTransparency="True" WindowStyle="None" MouseMove="Window_MouseMove" SizeToContent="WidthAndHeight" Icon="/MuOnline-Launcher-WPF;component/Images/icon.ico">
     <Window.Background>
-        <ImageBrush ImageSource="menu.png"/>
+        <ImageBrush ImageSource="../images/menu.png"/>
     </Window.Background>
-    <Grid Cursor="Arrow">
-        <Button Background="Transparent" BorderBrush="Beige" Click="Button_Exit" Width="25" Height="25" Margin="252,64,23,412">
+    <Grid Cursor="Arrow" Height="501" Width="300">
+        <Button Width="25" Height="24" Margin="248,63,22,408" Background="Transparent" BorderBrush="Beige" Click="Button_Settings_Exit">
             <StackPanel>
-                <Image Source="close.png" RenderTransformOrigin="1.269,1.562" Width="21" Height="21" Cursor="Arrow" AutomationProperties.Name="ButtonExit" Stretch="UniformToFill" />
+                <Image Source="../images/button_close.png" RenderTransformOrigin="1.269,1.562" Width="21" Height="19" Cursor="Arrow" Stretch="Fill" />
             </StackPanel>
         </Button>
+        <GroupBox Header="Settings" HorizontalAlignment="Left" Height="344" Margin="28,88,0,0" VerticalAlignment="Top" Width="236" Foreground="#FFECA713" BorderBrush="White" Background="Transparent">
+            <StackPanel>
+                <CheckBox Content="Window Mode" HorizontalAlignment="Left" Checked="CheckBox_Checked"  Unchecked="CheckBox_UnChecked" Foreground="White" />
+            </StackPanel>
+        </GroupBox>
     </Grid>
 </Window>

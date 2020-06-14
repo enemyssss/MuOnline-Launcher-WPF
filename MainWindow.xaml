@@ -5,19 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MuOnline_Launcher_WPF"
         mc:Ignorable="d"
-        Title="Laucher" Height="600" Width="800" WindowStartupLocation="CenterScreen" Cursor="Arrow"  Visibility="Visible" WindowStyle="None" AllowsTransparency="True" MouseMove="Windows_MouseMove">
-    
+        Title="Laucher" Height="600" Width="800" WindowStartupLocation="CenterScreen" Cursor="Arrow"  Visibility="Visible" WindowStyle="None" AllowsTransparency="True" MouseMove="Windows_MouseMove" Icon="images/icon.ico">
     <Window.Background>
         <ImageBrush ImageSource="images/launcher_background.png" />
     </Window.Background>
-    <Grid Margin="7,-2,-7,2">
-        <Button Margin="748,166,27,408" Background="Transparent" BorderBrush="Beige" Click="Button_Exit" Width="25" Height="25">
+    <Grid Margin="7,-2,-7,2" Width="800" Height="600">
+        <Button Margin="748,166,27,408" Background="Transparent" BorderBrush="Beige" Click="Button_Exit" Width="25" Height="24">
             <StackPanel>
-                <Image Source="images/close.png" RenderTransformOrigin="1.269,1.562" Width="21" Height="21" Cursor="Arrow" Stretch="Fill" AutomationProperties.Name="ButtonExit" />
+                <Image Source="images/button_close.png" RenderTransformOrigin="1.269,1.562" Width="21" Height="21" Cursor="Arrow" Stretch="Fill" AutomationProperties.Name="ButtonExit" />
             </StackPanel>
         </Button>
 
-        <Button Width="160" Height="49" Margin="526,506,114,44" Background="Transparent" BorderBrush="Beige">
+        <Button Width="160" Height="49" Margin="526,506,114,44" Background="Transparent" BorderBrush="Beige" Click="Button_Play">
             <StackPanel>
                 <Image Source="images/play.png" RenderTransformOrigin="1.269,1.562"  Cursor="Arrow"  Stretch="Fill"/>
             </StackPanel>
@@ -28,5 +27,6 @@
                 <Image Source="images/options.png" Stretch="fill"/>
             </StackPanel>
         </Button>
+
     </Grid>
 </Window>

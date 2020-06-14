@@ -12,6 +12,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MuOnline_Launcher_WPF.Classes;
+
+
 
 namespace MuOnline_Launcher_WPF.Mirrors
 {
@@ -32,5 +35,38 @@ namespace MuOnline_Launcher_WPF.Mirrors
                 this.DragMove();
             }
         }
+
+        private void Button_Settings_Exit(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                ChangeResolution.ChangeSettings("WindowMode", 0x00000001);
+            }
+            catch (Exception a)
+            {
+                MessageBox.Show(Convert.ToString(a));
+            }
+
+        }
+
+        private void CheckBox_UnChecked(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                ChangeResolution.ChangeSettings("WindowMode", 0x00000000);
+            }
+            catch (Exception a)
+            {
+                MessageBox.Show(Convert.ToString(a));
+            }
+        }
+
+
+
     }
 }
