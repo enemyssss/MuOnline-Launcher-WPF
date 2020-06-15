@@ -7,7 +7,7 @@ using Microsoft.Win32;
 
 namespace MuOnline_Launcher_WPF.Classes
 {
-    class Settings
+    class Setting
     {
         private static string path = @"Software\Webzen\Mu\Config";
 

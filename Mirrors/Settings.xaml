@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MuOnline_Launcher_WPF.Mirrors"
         mc:Ignorable="d"
-        Title="Settings" Height="501" Width="300" WindowStartupLocation="CenterOwner" Visibility="Visible" AllowsTransparency="True" WindowStyle="None" MouseMove="Window_MouseMove" SizeToContent="WidthAndHeight">
+        Title="Settings" Height="501" Width="300" WindowStartupLocation="CenterScreen" Visibility="Visible" AllowsTransparency="True" WindowStyle="None" MouseMove="Window_MouseMove" SizeToContent="WidthAndHeight">
 
     <Window.Background>
         <ImageBrush ImageSource="../images/menu.png"/>
@@ -16,10 +16,15 @@
                 <Image Source="../images/close.png" RenderTransformOrigin="1.269,1.562" Width="21" Height="21" Cursor="Arrow" AutomationProperties.Name="ButtonExit" Stretch="UniformToFill" />
             </StackPanel>
         </Button>
-        <GroupBox Header="Settings" HorizontalAlignment="Left" Height="326" Margin="33,90,0,0" VerticalAlignment="Top" Width="235" Foreground="White" BorderBrush="White">
+        <GroupBox Header="Settings" HorizontalAlignment="Left" Height="295" Margin="33,87,0,0" VerticalAlignment="Top" Width="235" Foreground="#FFE8AB41" BorderBrush="#FFE8AB41">
             <StackPanel>
-                <CheckBox Content="Window Mode" HorizontalAlignment="Left" x:Name="chkQuickProcess" Foreground="White" />
+                <CheckBox Content="Window Mode" HorizontalAlignment="Left" Foreground="White" Name="settingsWindowMode" IsChecked="{Binding ElementName=WindowMode, Path= settingsWindowMode }"/>
             </StackPanel>
         </GroupBox>
+        <Button Width="160" Height="49"  Background="Transparent" BorderBrush="Beige" Margin="70,392,70,60" Click="Button_Save">
+            <StackPanel>
+                <Image Source="../images/save.png" RenderTransformOrigin="1.269,1.562"  Cursor="Arrow"  Stretch="Fill"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Window>
