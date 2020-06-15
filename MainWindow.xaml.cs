@@ -1,9 +1,6 @@
-﻿using MuOnline_Launcher_WPF.Classes;
-using MuOnline_Launcher_WPF.Mirrors;
+﻿using MuOnline_Launcher_WPF.Mirrors;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,23 +38,6 @@ namespace MuOnline_Launcher_WPF
             settings.Show();
         }
 
-        private void Button_Play(object sender, EventArgs e)
-        {
-            if (!IsProcessOpen("main.exe"))
-            {
-                if (!File.Exists("main.exe"))
-                {
-                    MessageBox.Show("File Main.exe doesn't exist!");
-                }
-                else
-                Process.Start("main.exe");
-            }
-            else
-            {
-                MessageBox.Show("You can start the game only once!");
-            }
-        }
-
         private void Windows_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -65,19 +45,5 @@ namespace MuOnline_Launcher_WPF
                 this.DragMove();
             }
         }
-
-        public bool IsProcessOpen(string name)
-        {
-            foreach (Process clsProcess in Process.GetProcesses())
-            {
-                if (clsProcess.ProcessName.Contains(name))
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
     }
 }
