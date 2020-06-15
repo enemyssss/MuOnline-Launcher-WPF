@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Settings.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -101,15 +102,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resolutions\" />
-    <Folder Include="UserControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\launcher_background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\close.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\play.png" />
@@ -121,10 +116,7 @@
     <Resource Include="Images\menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Mirrors\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Mirrors\close.png" />
+    <Resource Include="Images\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

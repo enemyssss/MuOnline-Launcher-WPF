@@ -8,13 +8,18 @@
         Title="Settings" Height="501" Width="300" WindowStartupLocation="CenterOwner" Visibility="Visible" AllowsTransparency="True" WindowStyle="None" MouseMove="Window_MouseMove" SizeToContent="WidthAndHeight">
 
     <Window.Background>
-        <ImageBrush ImageSource="menu.png"/>
+        <ImageBrush ImageSource="../images/menu.png"/>
     </Window.Background>
-    <Grid Cursor="Arrow">
+    <Grid Cursor="Arrow" Width="300" Height="501">
         <Button Background="Transparent" BorderBrush="Beige" Click="Button_Exit" Width="25" Height="25" Margin="252,64,23,412">
             <StackPanel>
-                <Image Source="close.png" RenderTransformOrigin="1.269,1.562" Width="21" Height="21" Cursor="Arrow" AutomationProperties.Name="ButtonExit" Stretch="UniformToFill" />
+                <Image Source="../images/close.png" RenderTransformOrigin="1.269,1.562" Width="21" Height="21" Cursor="Arrow" AutomationProperties.Name="ButtonExit" Stretch="UniformToFill" />
             </StackPanel>
         </Button>
+        <GroupBox Header="Settings" HorizontalAlignment="Left" Height="326" Margin="33,90,0,0" VerticalAlignment="Top" Width="235" Foreground="White" BorderBrush="White">
+            <StackPanel>
+                <CheckBox Content="Window Mode" HorizontalAlignment="Left" x:Name="chkQuickProcess" Foreground="White" />
+            </StackPanel>
+        </GroupBox>
     </Grid>
 </Window>

@@ -32,5 +32,10 @@ namespace MuOnline_Launcher_WPF.Mirrors
                 this.DragMove();
             }
         }
+
+        private void Button_Exit(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
