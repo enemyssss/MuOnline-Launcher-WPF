@@ -10,20 +10,24 @@
     <Window.Background>
         <ImageBrush ImageSource="images/launcher_background.png" />
     </Window.Background>
-    <Grid Margin="7,-2,-7,2">
-        <Button Margin="748,166,27,408" Background="Transparent" BorderBrush="Beige" Click="Button_Exit" Width="25" Height="25">
-            <StackPanel>
+    <Grid Margin="8,2,-8,-2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Background="Transparent" BorderBrush="Beige" Click="Button_Exit" Width="25" Height="25" Grid.Row="0" Margin="752,158,23,297">
+            <StackPanel Grid.Row="0">
                 <Image Source="images/close.png" RenderTransformOrigin="1.269,1.562" Width="21" Height="21" Cursor="Arrow" Stretch="Fill" AutomationProperties.Name="ButtonExit" />
             </StackPanel>
         </Button>
 
-        <Button Width="160" Height="49" Margin="526,506,114,44" Background="Transparent" BorderBrush="Beige">
-            <StackPanel>
+        <Button Width="160" Height="49"  Background="Transparent" BorderBrush="Beige" Grid.Row="1" Margin="518,22,122,49">
+            <StackPanel Grid.Row="1">
                 <Image Source="images/play.png" RenderTransformOrigin="1.269,1.562"  Cursor="Arrow"  Stretch="Fill"/>
             </StackPanel>
         </Button>
 
-        <Button Width="54" Height="49" Margin="704,506,42,44" Background="Transparent" BorderBrush="Beige" Click="Button_Settings">
+        <Button Width="54" Height="49"  Background="Transparent" BorderBrush="Beige" Click="Button_Settings" Grid.Row="1" Margin="707,22,39,49">
             <StackPanel>
                 <Image Source="images/options.png" Stretch="fill"/>
             </StackPanel>

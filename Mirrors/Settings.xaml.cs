@@ -25,12 +25,11 @@ namespace MuOnline_Launcher_WPF.Mirrors
         public Settings()
         {
             InitializeComponent();
+            checkBoxWinMode.IsChecked = Properties.Settings.Default.WinMod;
+            ResolutionBox.SelectedIndex = Properties.Settings.Default.Resolution;
         }
 
-        public void GetSettings()
-        {
-            settingsWindowMode.IsChecked = Properties.Settings.Default.WindowMode;
-        }
+
 
         private void Window_MouseMove(object sender, MouseEventArgs e)
         {
@@ -42,17 +41,75 @@ namespace MuOnline_Launcher_WPF.Mirrors
 
         private void Button_Save(object sender, EventArgs e)
         {
-            if (settingsWindowMode.IsChecked == true)
+            Properties.Settings.Default.WinMod = checkBoxWinMode.IsChecked.Value;
+            Properties.Settings.Default.Resolution = ResolutionBox.SelectedIndex;
+            Properties.Settings.Default.Save();
+
+            if (Properties.Settings.Default.WinMod == false)
             {
-                Setting.ChangeSettings("WindowMode", 0x00000001);
+                switch (Properties.Settings.Default.Resolution)
+                {
+                    case 0:
+                        Setting.ChangeSettings("Resolution", 0x00000001);
+                        Setting.ChangeSettings("ResolutionA", 0x00000001);
+                        Setting.ChangeSettings("WindowMode", 0x0000000);
+                        break;
+                    case 1:
+                        Setting.ChangeSettings("Resolution", 0x00000002);
+                        Setting.ChangeSettings("ResolutionA", 0x00000002);
+                        Setting.ChangeSettings("WindowMode", 0x0000000);
+                        break;
+                    case 2:
+                        Setting.ChangeSettings("Resolution", 0x00000003);
+                        Setting.ChangeSettings("ResolutionA", 0x00000003);
+                        Setting.ChangeSettings("WindowMode", 0x0000000);
+                        break;
+                    case 3:
+                        Setting.ChangeSettings("Resolution", 0x00000004);
+                        Setting.ChangeSettings("ResolutionA", 0x00000004);
+                        Setting.ChangeSettings("WindowMode", 0x0000000);
+                        break;
+                    case 4:
+                        Setting.ChangeSettings("Resolution", 0x00000005);
+                        Setting.ChangeSettings("ResolutionA", 0x00000005);
+                        Setting.ChangeSettings("WindowMode", 0x0000000);
+                        break;
+                }
             }
             else
             {
-                Setting.ChangeSettings("WindowMode", 0x00000000);
+                switch (Properties.Settings.Default.Resolution)
+                {
+                    case 0:
+                        Setting.ChangeSettings("Resolution", 0x00000001);
+                        Setting.ChangeSettings("ResolutionA", 0x00000001);
+                        Setting.ChangeSettings("WindowMode", 0x0000001);
+                        break;
+                    case 1:
+                        Setting.ChangeSettings("Resolution", 0x00000002);
+                        Setting.ChangeSettings("ResolutionA", 0x00000002);
+                        Setting.ChangeSettings("WindowMode", 0x0000001);
+                        break;
+                    case 2:
+                        Setting.ChangeSettings("Resolution", 0x00000003);
+                        Setting.ChangeSettings("ResolutionA", 0x00000003);
+                        Setting.ChangeSettings("WindowMode", 0x0000001);
+                        break;
+                    case 3:
+                        Setting.ChangeSettings("Resolution", 0x00000004);
+                        Setting.ChangeSettings("ResolutionA", 0x00000004);
+                        Setting.ChangeSettings("WindowMode", 0x0000001);
+                        break;
+                    case 4:
+                        Setting.ChangeSettings("Resolution", 0x00000005);
+                        Setting.ChangeSettings("ResolutionA", 0x00000005);
+                        Setting.ChangeSettings("WindowMode", 0x0000001);
+                        break;
+                }
             }
-            Properties.Settings.Default.WindowMode = settingsWindowMode.IsEnabled;
 
-            MessageBox.Show("Saved!");
+
+            this.Close();
         }
 
         private void Button_Exit(object sender, EventArgs e)

@@ -26,12 +26,24 @@ namespace MuOnline_Launcher_WPF.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool WindowMode {
+        public bool WinMod {
             get {
-                return ((bool)(this["WindowMode"]));
+                return ((bool)(this["WinMod"]));
             }
             set {
-                this["WindowMode"] = value;
+                this["WinMod"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Resolution {
+            get {
+                return ((int)(this["Resolution"]));
+            }
+            set {
+                this["Resolution"] = value;
             }
         }
     }

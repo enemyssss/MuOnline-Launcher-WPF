@@ -18,7 +18,15 @@
         </Button>
         <GroupBox Header="Settings" HorizontalAlignment="Left" Height="295" Margin="33,87,0,0" VerticalAlignment="Top" Width="235" Foreground="#FFE8AB41" BorderBrush="#FFE8AB41">
             <StackPanel>
-                <CheckBox Content="Window Mode" HorizontalAlignment="Left" Foreground="White" Name="settingsWindowMode" IsChecked="{Binding ElementName=WindowMode, Path= settingsWindowMode }"/>
+                <TextBlock Text="Resolution:" Margin="5px"/>
+                <ComboBox Name="ResolutionBox" Margin="5px">
+                    <ComboBoxItem Content="800x600"/>
+                    <ComboBoxItem Content="1024x768"/>
+                    <ComboBoxItem Content="1280x720"/>
+                    <ComboBoxItem Content="1280x800"/>
+                    <ComboBoxItem Content="1280x1024"/>
+                </ComboBox>
+                <CheckBox Name="checkBoxWinMode" Content="Window Mode" HorizontalAlignment="Left" Foreground="White" Margin="5px"/>
             </StackPanel>
         </GroupBox>
         <Button Width="160" Height="49"  Background="Transparent" BorderBrush="Beige" Margin="70,392,70,60" Click="Button_Save">
