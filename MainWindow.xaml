@@ -11,23 +11,27 @@
         <ImageBrush ImageSource="images/launcher_background.png" />
     </Window.Background>
     <Grid Margin="8,2,-8,-2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="1.2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="4*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Background="Transparent" BorderBrush="Beige" Click="Button_Exit" Width="25" Height="25" Grid.Row="0" Margin="752,158,23,297">
-            <StackPanel Grid.Row="0">
+        <Button Background="Transparent" BorderBrush="Beige" Click="Button_Exit" Width="25" Height="25" Grid.Row="0"  Grid.Column="1" Margin="249,157,26,298">
+            <StackPanel Grid.Row="0" Grid.Column="1">
                 <Image Source="images/close.png" RenderTransformOrigin="1.269,1.562" Width="21" Height="21" Cursor="Arrow" Stretch="Fill" AutomationProperties.Name="ButtonExit" />
             </StackPanel>
         </Button>
 
-        <Button Width="160" Height="49"  Background="Transparent" BorderBrush="Beige" Grid.Row="1" Margin="518,22,122,49">
-            <StackPanel Grid.Row="1">
+        <Button Width="160" Height="49"  Background="Transparent" BorderBrush="Beige" Grid.Row="1" Margin="8,19,132,52" Grid.Column="1" >
+            <StackPanel Grid.Row="1" Grid.Column="1">
                 <Image Source="images/play.png" RenderTransformOrigin="1.269,1.562"  Cursor="Arrow"  Stretch="Fill"/>
             </StackPanel>
         </Button>
 
-        <Button Width="54" Height="49"  Background="Transparent" BorderBrush="Beige" Click="Button_Settings" Grid.Row="1" Margin="707,22,39,49">
+        <Button Width="54" Height="49"  Background="Transparent" BorderBrush="Beige" Click="Button_Settings" Grid.Row="1" Grid.Column="1" Margin="193,19,53,52">
             <StackPanel>
                 <Image Source="images/options.png" Stretch="fill"/>
             </StackPanel>
