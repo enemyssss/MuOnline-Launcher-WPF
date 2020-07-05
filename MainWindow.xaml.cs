@@ -1,4 +1,5 @@
-﻿using MuOnline_Launcher_WPF.Mirrors;
+﻿using MuOnline_Launcher_WPF.Classes;
+using MuOnline_Launcher_WPF.Mirrors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,12 @@ namespace MuOnline_Launcher_WPF
         public MainWindow()
         {
             InitializeComponent();
+
+            List<Character> CharacterList = new List<Character>();
+
+            CharacterList.Add(new Character() {Id = 1,Name = "Icarus", Level = 400, Resets = 1 , GR = 1, Status = "Online" });
+
+            CharacterRanking.ItemsSource = CharacterList;
         }
 
         private void Button_Exit(object sender, RoutedEventArgs e)
@@ -44,6 +51,11 @@ namespace MuOnline_Launcher_WPF
             {
                 this.DragMove();
             }
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MuOnline_Launcher_WPF"
         mc:Ignorable="d"
         Title="Laucher" Height="600" Width="800" WindowStartupLocation="CenterScreen" Cursor="Arrow"  Visibility="Visible" WindowStyle="None" AllowsTransparency="True" MouseMove="Windows_MouseMove">
-    
+
     <Window.Background>
         <ImageBrush ImageSource="images/launcher_background.png" />
     </Window.Background>
@@ -36,5 +36,24 @@
                 <Image Source="images/options.png" Stretch="fill"/>
             </StackPanel>
         </Button>
+        <TabControl Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Height="310" Margin="10,166,0,0" VerticalAlignment="Top" Width="254" Opacity="0.8" OpacityMask="Black">
+            <TabItem Header="News">
+                <Grid Background="black">
+     
+                </Grid>
+            </TabItem>
+            <TabItem Header="Characters">
+                <Grid Background="black" Margin="0,2,0,-2">
+                    <Label Content="Character Ranking" Foreground="white" HorizontalAlignment="Center"/>
+                    <DataGrid HorizontalAlignment="Center" Height="243" VerticalAlignment="Center" Width="226" Background="Beige" SelectionChanged="DataGrid_SelectionChanged" Name="CharacterRanking"  AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Guilds">
+                <Grid Background="black"/>
+            </TabItem>
+        </TabControl>
+        <Border Margin="11,185,29,8" BorderBrush="Beige" BorderThickness="2"/>
+        <Image Height="282" Margin="15,188,33,0" VerticalAlignment="Top" Width="452" Source="MU-Legend-game-wallpaper-9-1024x533.jpg" Stretch="Fill" Grid.Column="0" Grid.Row="0" Opacity="0.8"/>
+
     </Grid>
 </Window>
