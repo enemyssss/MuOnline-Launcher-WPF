@@ -37,19 +37,25 @@
             </StackPanel>
         </Button>
         <TabControl Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Height="310" Margin="10,166,0,0" VerticalAlignment="Top" Width="254" Opacity="0.8" OpacityMask="Black">
-            <TabItem Header="News">
-                <Grid Background="black">
-     
+            <TabItem Header="Media">
+                <Grid Background="black" Margin="0,2,0,-2">
+                    <Image Source="votebanner.jpg" Margin="2px" VerticalAlignment="Top" Width="150px"/>
+
+                    <Image Source="webshop.jpg" Margin="49,74,49,146" VerticalAlignment="Center" Width="150px"/>
+
+                    <Image Source="left_main_snsImg100408.jpg" Margin="49,0,49,58" VerticalAlignment="Bottom" Width="150px"/>
+
                 </Grid>
             </TabItem>
             <TabItem Header="Characters">
                 <Grid Background="black" Margin="0,2,0,-2">
-                    <Label Content="Character Ranking" Foreground="white" HorizontalAlignment="Center"/>
-                    <DataGrid HorizontalAlignment="Center" Height="243" VerticalAlignment="Center" Width="226" Background="Beige" SelectionChanged="DataGrid_SelectionChanged" Name="CharacterRanking"  AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False"/>
+                    <DataGrid HorizontalAlignment="Center" Height="250" VerticalAlignment="Center" Width="240" Background="Beige" SelectionChanged="DataGrid_SelectionChanged" Name="CharacterRanking"  AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" IsReadOnly="True"  />
                 </Grid>
             </TabItem>
             <TabItem Header="Guilds">
-                <Grid Background="black"/>
+                <Grid Background="black">
+                    <DataGrid HorizontalAlignment="Center" Height="250" VerticalAlignment="Center" Width="240" Background="Beige" SelectionChanged="DataGrid_SelectionChanged" Name="GuildRanking"  AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" IsReadOnly="True"/>
+                </Grid>
             </TabItem>
         </TabControl>
         <Border Margin="11,185,29,8" BorderBrush="Beige" BorderThickness="2"/>

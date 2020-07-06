@@ -6,21 +6,19 @@ using System.Threading.Tasks;
 
 namespace MuOnline_Launcher_WPF.Classes
 {
-    class Character
+    class Guild
     {
         public int Id { get; private set; }
         public string Name { get; private set; }
-        public int Level { get; private set; }
-        public int Resets { get; private set; }
-        public int GR { get; private set; }
+        public int Members { get; private set; }
+        public int Score { get; private set; }
 
-        public Character(int id, string name, int level, int resets, int gr)
+        public Guild(int id, string name, int members, int score)
         {
             Id = id;
             Name = name;
-            Level = level;
-            Resets = resets;
-            GR = gr;
+            Members = members;
+            Score = score;
         }
     }
 }

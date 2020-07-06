@@ -4,6 +4,23 @@
              xmlns:local="clr-namespace:MuOnline_Launcher_WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <Style TargetType="DataGrid">
+            <Setter Property="ColumnWidth" Value="*"/>
+            <Setter Property="EnableColumnVirtualization" Value="False"/>
+            <Setter Property="EnableRowVirtualization" Value="False"/>
+            <Setter Property="RowHeaderWidth" Value="0" />
+        </Style>
+        <Style TargetType="DataGridCell">
+            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Width" Value="Auto"/>
 
+        </Style>
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
     </Application.Resources>
 </Application>

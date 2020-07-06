@@ -56,6 +56,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Character.cs" />
+    <Compile Include="Classes\Guild.cs" />
+    <Compile Include="Classes\News.cs" />
     <Compile Include="Settings.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -127,6 +129,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="MU-Legend-game-wallpaper-9-1024x533.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="votebanner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="webshop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="left_main_snsImg100408.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
