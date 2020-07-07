@@ -58,6 +58,7 @@
     <Compile Include="Classes\Character.cs" />
     <Compile Include="Classes\Guild.cs" />
     <Compile Include="Classes\News.cs" />
+    <Compile Include="Classes\WebCommunication.cs" />
     <Compile Include="Settings.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -125,19 +126,22 @@
     <Resource Include="Images\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="fcdb17b8503fad452a32cb8993db7737.jpg" />
+    <Resource Include="Images\0.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="MU-Legend-game-wallpaper-9-1024x533.jpg" />
+    <Resource Include="Images\1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="votebanner.jpg" />
+    <Resource Include="Images\MU-Legend-game-wallpaper-9-1024x533.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="webshop.jpg" />
+    <Resource Include="Images\Unbenannt.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="left_main_snsImg100408.jpg" />
+    <Resource Include="Images\votebanner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\webshop.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

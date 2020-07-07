@@ -2,6 +2,8 @@
 using MuOnline_Launcher_WPF.Mirrors;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +24,10 @@ namespace MuOnline_Launcher_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        Settings settings = null;
+        public string StartFile = "Main.exe";
+       
+
         public MainWindow()
         {
             InitializeComponent();
@@ -38,6 +44,8 @@ namespace MuOnline_Launcher_WPF
 
             CharacterRanking.ItemsSource = CharacterList;
             GuildRanking.ItemsSource = GuildList;
+            ServerStatusBar.Source = new BitmapImage(new Uri("images/1.png", UriKind.Relative));
+
         }
 
         private void Button_Exit(object sender, RoutedEventArgs e)
@@ -47,9 +55,17 @@ namespace MuOnline_Launcher_WPF
 
         private void Button_Settings(object sender, RoutedEventArgs e)
         {
-            Settings settings = new Settings();
-            this.Visibility = Visibility.Visible;
-            settings.Show();
+            if (settings == null)
+            {
+                settings = new Settings();
+                this.Visibility = Visibility.Visible;
+                settings.Show();
+            }
+            else
+            {
+                settings.Close();
+                settings = null;
+            }
         }
 
         private void Windows_MouseMove(object sender, MouseEventArgs e)
@@ -60,9 +76,36 @@ namespace MuOnline_Launcher_WPF
             }
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Registration(object sender, RoutedEventArgs e)
         {
+            System.Diagnostics.Process.Start("http://google.com");
+        }
 
+        private void Button_Vote(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("OK");
+        }
+
+        private void Button_WebShop(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("OK");
+        }
+
+        private void Button_Play(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Process.Start(StartFile);
+            }
+            catch (System.ComponentModel.Win32Exception)
+            {
+
+                MessageBox.Show($"{StartFile} doesn't exist!");
+            }
+            catch (Exception w)
+            {
+                MessageBox.Show(w.ToString());
+            }
         }
     }
 }

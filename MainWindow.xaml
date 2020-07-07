@@ -25,7 +25,7 @@
             </StackPanel>
         </Button>
 
-        <Button Width="160" Height="49"  Background="Transparent" BorderBrush="Beige" Grid.Row="1" Margin="8,19,132,52" Grid.Column="1" >
+        <Button Width="160" Height="49"  Background="Transparent" BorderBrush="Beige" Grid.Row="1" Margin="8,19,132,52" Grid.Column="1" Click="Button_Play" >
             <StackPanel Grid.Row="1" Grid.Column="1">
                 <Image Source="images/play.png" RenderTransformOrigin="1.269,1.562"  Cursor="Arrow"  Stretch="Fill"/>
             </StackPanel>
@@ -36,30 +36,56 @@
                 <Image Source="images/options.png" Stretch="fill"/>
             </StackPanel>
         </Button>
-        <TabControl Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Height="310" Margin="10,166,0,0" VerticalAlignment="Top" Width="254" Opacity="0.8" OpacityMask="Black">
+        <TabControl Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Height="310" Margin="10,166,0,0" VerticalAlignment="Top" Width="254" Opacity="0.8" OpacityMask="Black" BorderBrush="White" Foreground="White">
             <TabItem Header="Media">
+
                 <Grid Background="black" Margin="0,2,0,-2">
-                    <Image Source="votebanner.jpg" Margin="2px" VerticalAlignment="Top" Width="150px"/>
+                    <Button Width="150px" Margin="49,12,49,221" Click="Button_Registration">
+                        <StackPanel>
+                            <Image Source="images/Unbenannt.png" />
+                        </StackPanel>
+                    </Button>
 
-                    <Image Source="webshop.jpg" Margin="49,74,49,146" VerticalAlignment="Center" Width="150px"/>
+                    <Button Width="150px" Margin="49,76,49,144" Click="Button_Vote">
+                        <StackPanel>
+                            <Image Source="images/votebanner.jpg" Width="150px"/>
+                        </StackPanel>
+                    </Button>
 
-                    <Image Source="left_main_snsImg100408.jpg" Margin="49,0,49,58" VerticalAlignment="Bottom" Width="150px"/>
+                    <Button Width="150px" Margin="49,153,49,67" Click="Button_WebShop">
+                        <StackPanel>
+                            <Image Source="images/webshop.jpg"/>
+                        </StackPanel>
+                    </Button>
 
                 </Grid>
             </TabItem>
             <TabItem Header="Characters">
                 <Grid Background="black" Margin="0,2,0,-2">
-                    <DataGrid HorizontalAlignment="Center" Height="250" VerticalAlignment="Center" Width="240" Background="Beige" SelectionChanged="DataGrid_SelectionChanged" Name="CharacterRanking"  AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" IsReadOnly="True"  />
+                    <DataGrid HorizontalAlignment="Center" Height="250" VerticalAlignment="Center" Width="240" Background="Beige"  Name="CharacterRanking"  AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" IsReadOnly="True"  />
                 </Grid>
             </TabItem>
             <TabItem Header="Guilds">
                 <Grid Background="black">
-                    <DataGrid HorizontalAlignment="Center" Height="250" VerticalAlignment="Center" Width="240" Background="Beige" SelectionChanged="DataGrid_SelectionChanged" Name="GuildRanking"  AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" IsReadOnly="True"/>
+                    <DataGrid HorizontalAlignment="Center" Height="250" VerticalAlignment="Center" Width="240" Background="Beige"  Name="GuildRanking"  AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" IsReadOnly="True"/>
                 </Grid>
             </TabItem>
-        </TabControl>
-        <Border Margin="11,185,29,8" BorderBrush="Beige" BorderThickness="2"/>
-        <Image Height="282" Margin="15,188,33,0" VerticalAlignment="Top" Width="452" Source="MU-Legend-game-wallpaper-9-1024x533.jpg" Stretch="Fill" Grid.Column="0" Grid.Row="0" Opacity="0.8"/>
+            <TabItem Header="Server Info">
+                <Grid Background="black">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" x:Name="lbl_CountDownTimer" HorizontalAlignment="Center" Foreground="white">Server Status:</TextBlock>
+                    <Image Name="ServerStatusBar" Grid.Row="0" Width="200px" />
 
+                </Grid>
+
+            </TabItem>
+        </TabControl>
+        <Border Margin="13,186,31,8" BorderBrush="Beige" BorderThickness="2"/>
+        <Image Height="282" Margin="15,188,33,0" VerticalAlignment="Top" Width="452" Source="images/MU-Legend-game-wallpaper-9-1024x533.jpg" Stretch="Fill" Grid.Column="0" Grid.Row="0" Opacity="0.8"/>
     </Grid>
 </Window>
